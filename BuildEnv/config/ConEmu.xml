@@ -1335,15 +1335,15 @@
 				</key>
 			</key>
 		</key>
-		<key name=".Vanilla" modified="2019-04-23 22:39:51" build="150813g">
-			<value name="UseCurrentSizePos" type="hex" data="00"/>
+		<key name=".Vanilla" modified="2019-04-23 23:10:36" build="150813g">
+			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="00000073"/>
-			<value name="ConWnd Height" type="dword" data="00000024"/>
+			<value name="ConWnd Width" type="dword" data="00000086"/>
+			<value name="ConWnd Height" type="dword" data="00000028"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="ConWnd X" type="dword" data="000006ac"/>
-			<value name="ConWnd Y" type="dword" data="0000004e"/>
+			<value name="ConWnd X" type="dword" data="0000069f"/>
+			<value name="ConWnd Y" type="dword" data="00000020"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="StartType" type="hex" data="02"/>
@@ -1403,7 +1403,7 @@
 			<value name="FontSize" type="dword" data="0000000e"/>
 			<value name="StatusFontHeight" type="dword" data="0000000c"/>
 			<value name="TabFontHeight" type="dword" data="0000000d"/>
-			<key name="HotKeys" modified="2019-04-23 22:37:49" build="150813g">
+			<key name="HotKeys" modified="2019-04-23 23:10:28" build="150813g">
 				<value name="MinimizeRestore" type="dword" data="000011c0"/>
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="0000005b"/>
@@ -1623,9 +1623,10 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
+				<line data="{cmd}"/>
+				<line data="cmd /k &quot;bash.exe -l &amp;&amp; RenameTab bash baby&quot;"/>
 				<line data="powershell.exe"/>
 				<line data="{PowerShell}"/>
-				<line data="{cmd}"/>
 				<line data="{Bash::Git bash}"/>
 			</value>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
@@ -1633,7 +1634,7 @@
 			<value name="Multi.ShowButtons" type="hex" data="01"/>
 			<value name="Multi.ShowSearch" type="hex" data="01"/>
 			<value name="Multi.NumberInCaption" type="hex" data="00"/>
-			<value name="Multi.CloseConfirmFlags" type="hex" data="04"/>
+			<value name="Multi.CloseConfirmFlags" type="hex" data="00"/>
 			<value name="Multi.NewConfirm" type="hex" data="00"/>
 			<value name="Multi.DupConfirm" type="hex" data="00"/>
 			<value name="Multi.DetachConfirm" type="hex" data="00"/>
@@ -1693,7 +1694,7 @@
 			<value name="ComSpec.UpdateEnv" type="hex" data="00"/>
 			<value name="ComSpec.EnvAddPath" type="hex" data="01"/>
 			<value name="ComSpec.EnvAddExePath" type="hex" data="01"/>
-			<value name="ComSpec.UncPaths" type="hex" data="00"/>
+			<value name="ComSpec.UncPaths" type="hex" data="01"/>
 			<value name="ComSpec.Path" type="string" data=""/>
 			<value name="EnvironmentSet" type="multi"/>
 			<value name="CTS.Intelligent" type="hex" data="01"/>
@@ -1896,18 +1897,18 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="Tasks" modified="2019-04-23 22:37:49" build="150813g">
+			<key name="Tasks" modified="2019-04-23 23:10:28" build="150813g">
 				<value name="Count" type="dword" data="00000003"/>
-				<key name="Task1" modified="2019-04-23 22:37:49" build="150813g">
+				<key name="Task1" modified="2019-04-23 23:10:28" build="150813g">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
+					<value name="GuiArgs" type="string" data=" /icon &quot;%PBCD%\images\icon.ico&quot;"/>
 					<value name="Cmd1" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\CmdInit.cmd&quot;"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2019-04-23 22:37:49" build="150813g">
+				<key name="Task2" modified="2019-04-23 23:10:28" build="150813g">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1916,14 +1917,15 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2019-04-23 22:39:18" build="150813g">
+				<key name="Task3" modified="2019-04-23 23:10:28" build="150813g">
 					<value name="Name" type="string" data="{bash}"/>
 					<value name="Flags" type="dword" data="00000002"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="&quot;%TTLD%\Git\git-cmd.exe&quot; --no-cd --command=usr/bin/bash.exe -l -i"/>
+					<value name="GuiArgs" type="string" data=" /icon &quot;%PBCD%\images\icon.ico&quot;"/>
+					<value name="Cmd1" type="string" data="bash.exe -l"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
+					<value name="Cmd2" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\RenameTab.cmd BASH&quot;"/>
 				</key>
 				<key name="Task4" modified="2019-04-23 22:15:09" build="150813g">
 					<value name="Name" type="string" data="{Shells::cmd 64/32}"/>
@@ -1999,10 +2001,10 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2019-04-23 22:39:18" build="150813g">
+			<key name="Apps" modified="2019-04-23 23:10:28" build="150813g">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2019-04-23 22:39:18" build="150813g">
+			<key name="Colors" modified="2019-04-23 23:10:28" build="150813g">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 		</key>
