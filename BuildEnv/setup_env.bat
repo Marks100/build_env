@@ -37,7 +37,9 @@ set COMMON_TOOLS=^
 %TTLD%\gcc-arm\bin;^
 %TTLD%\gcc-arm\arm-none-eabi\bin;^
 %TTLD%\Teraterm;^
+%TTLD%\CoIDE;^
 %TTLD%\Uncrustify;^
+"%TTLD%\ST\STM32 ST-LINK Utility\ST-LINK Utility";^
 %PROGFILES_PATH%\USB Redirector Client;^
 %PROGFILES_PATH%\TortoiseSVN\bin;^
 %PBCD%\bin;^
