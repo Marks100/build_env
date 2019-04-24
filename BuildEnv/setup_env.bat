@@ -64,7 +64,7 @@ if defined ConEmuBuild (
 )
 
 :: Add aliases
-::doskey /macrofile="%BENV_CORE%\config\aliases"
+doskey /macrofile="%BENV_CORE%\config\aliases"
 
 
 :: Set home path
