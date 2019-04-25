@@ -1335,15 +1335,15 @@
 				</key>
 			</key>
 		</key>
-		<key name=".Vanilla" modified="2019-04-24 21:30:49" build="150813g">
+		<key name=".Vanilla" modified="2019-04-24 22:57:23" build="150813g">
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
 			<value name="ConWnd Width" type="dword" data="00000086"/>
 			<value name="ConWnd Height" type="dword" data="00000028"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="ConWnd X" type="dword" data="000001fa"/>
-			<value name="ConWnd Y" type="dword" data="00000060"/>
+			<value name="ConWnd X" type="dword" data="0000066c"/>
+			<value name="ConWnd Y" type="dword" data="00000053"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="StartType" type="hex" data="02"/>
@@ -1403,7 +1403,7 @@
 			<value name="FontSize" type="dword" data="0000000e"/>
 			<value name="StatusFontHeight" type="dword" data="0000000c"/>
 			<value name="TabFontHeight" type="dword" data="0000000d"/>
-			<key name="HotKeys" modified="2019-04-24 21:30:49" build="150813g">
+			<key name="HotKeys" modified="2019-04-24 22:57:23" build="150813g">
 				<value name="MinimizeRestore" type="dword" data="000011c0"/>
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="0000005b"/>
@@ -1623,6 +1623,7 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
+				<line data="far"/>
 				<line data="{cmd}"/>
 				<line data="{PowerShell}"/>
 				<line data="cmd /k &quot;bash.exe -l &amp;&amp; RenameTab bash baby&quot;"/>
@@ -1808,7 +1809,7 @@
 			<value name="StatusBar.Hide.Time" type="hex" data="01"/>
 			<value name="StatusBar.Hide.Resize" type="hex" data="00"/>
 			<value name="Tabs" type="hex" data="01"/>
-			<value name="TabsLocation" type="hex" data="00"/>
+			<value name="TabsLocation" type="hex" data="01"/>
 			<value name="TabIcons" type="hex" data="01"/>
 			<value name="OneTabPerGroup" type="hex" data="00"/>
 			<value name="ActivateSplitMouseOver" type="hex" data="01"/>
@@ -1817,7 +1818,7 @@
 			<value name="TabFlashChanged" type="dword" data="00000008"/>
 			<value name="TabRecent" type="hex" data="01"/>
 			<value name="TabDblClick" type="dword" data="00000001"/>
-			<value name="TabBtnDblClick" type="dword" data="00000000"/>
+			<value name="TabBtnDblClick" type="dword" data="00000004"/>
 			<value name="TabsOnTaskBar" type="hex" data="02"/>
 			<value name="TaskBarOverlay" type="hex" data="01"/>
 			<value name="TaskbarProgress" type="hex" data="01"/>
@@ -1901,9 +1902,9 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="Tasks" modified="2019-04-24 21:30:49" build="150813g">
+			<key name="Tasks" modified="2019-04-24 22:57:23" build="150813g">
 				<value name="Count" type="dword" data="00000003"/>
-				<key name="Task1" modified="2019-04-24 21:30:49" build="150813g">
+				<key name="Task1" modified="2019-04-24 22:57:23" build="150813g">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1912,7 +1913,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2019-04-24 21:30:49" build="150813g">
+				<key name="Task2" modified="2019-04-24 22:57:23" build="150813g">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1921,15 +1922,15 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2019-04-24 21:30:49" build="150813g">
+				<key name="Task3" modified="2019-04-24 23:01:00" build="150813g">
 					<value name="Name" type="string" data="{bash}"/>
 					<value name="Flags" type="dword" data="00000002"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;%PBCD%\images\icon.ico&quot;"/>
-					<value name="Cmd1" type="string" data="bash.exe -l"/>
+					<value name="Cmd1" type="string" data="&quot;bash.exe -l&quot;"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
-					<value name="Cmd2" type="string" data="doskey /macrofile=&quot;%BENV_CORE%\config\aliases&quot;"/>
+					<value name="Cmd2" type="string" data="Rename(0,[&quot;bash&quot;])"/>
 				</key>
 				<key name="Task4" modified="2019-04-23 22:15:09" build="150813g">
 					<value name="Name" type="string" data="{Shells::cmd 64/32}"/>
@@ -2005,10 +2006,10 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2019-04-24 21:30:49" build="150813g">
+			<key name="Apps" modified="2019-04-24 23:01:00" build="150813g">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2019-04-24 21:30:49" build="150813g">
+			<key name="Colors" modified="2019-04-24 23:01:00" build="150813g">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 		</key>
