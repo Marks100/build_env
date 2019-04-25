@@ -1335,15 +1335,15 @@
 				</key>
 			</key>
 		</key>
-		<key name=".Vanilla" modified="2019-04-23 23:51:09" build="150813g">
+		<key name=".Vanilla" modified="2019-04-24 21:30:49" build="150813g">
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
 			<value name="ConWnd Width" type="dword" data="00000086"/>
 			<value name="ConWnd Height" type="dword" data="00000028"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="ConWnd X" type="dword" data="00000765"/>
-			<value name="ConWnd Y" type="dword" data="00000064"/>
+			<value name="ConWnd X" type="dword" data="000001fa"/>
+			<value name="ConWnd Y" type="dword" data="00000060"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="StartType" type="hex" data="02"/>
@@ -1403,7 +1403,7 @@
 			<value name="FontSize" type="dword" data="0000000e"/>
 			<value name="StatusFontHeight" type="dword" data="0000000c"/>
 			<value name="TabFontHeight" type="dword" data="0000000d"/>
-			<key name="HotKeys" modified="2019-04-23 23:51:09" build="150813g">
+			<key name="HotKeys" modified="2019-04-24 21:30:49" build="150813g">
 				<value name="MinimizeRestore" type="dword" data="000011c0"/>
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="0000005b"/>
@@ -1624,9 +1624,9 @@
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
 				<line data="{cmd}"/>
+				<line data="{PowerShell}"/>
 				<line data="cmd /k &quot;bash.exe -l &amp;&amp; RenameTab bash baby&quot;"/>
 				<line data="powershell.exe"/>
-				<line data="{PowerShell}"/>
 				<line data="{Bash::Git bash}"/>
 			</value>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
@@ -1697,7 +1697,7 @@
 			<value name="ComSpec.UncPaths" type="hex" data="01"/>
 			<value name="ComSpec.Path" type="string" data=""/>
 			<value name="EnvironmentSet" type="multi">
-				<line data="alias e.='explorer .'"/>
+				<line data=" "/>
 				<line data=" "/>
 				<line data=" "/>
 			</value>
@@ -1901,9 +1901,9 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="Tasks" modified="2019-04-23 23:51:09" build="150813g">
+			<key name="Tasks" modified="2019-04-24 21:30:49" build="150813g">
 				<value name="Count" type="dword" data="00000003"/>
-				<key name="Task1" modified="2019-04-23 23:51:09" build="150813g">
+				<key name="Task1" modified="2019-04-24 21:30:49" build="150813g">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1912,7 +1912,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2019-04-23 23:51:09" build="150813g">
+				<key name="Task2" modified="2019-04-24 21:30:49" build="150813g">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1921,7 +1921,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2019-04-23 23:51:09" build="150813g">
+				<key name="Task3" modified="2019-04-24 21:30:49" build="150813g">
 					<value name="Name" type="string" data="{bash}"/>
 					<value name="Flags" type="dword" data="00000002"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1929,7 +1929,7 @@
 					<value name="Cmd1" type="string" data="bash.exe -l"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
-					<value name="Cmd2" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\RenameTab.cmd BASH&quot;"/>
+					<value name="Cmd2" type="string" data="doskey /macrofile=&quot;%BENV_CORE%\config\aliases&quot;"/>
 				</key>
 				<key name="Task4" modified="2019-04-23 22:15:09" build="150813g">
 					<value name="Name" type="string" data="{Shells::cmd 64/32}"/>
@@ -2005,10 +2005,10 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2019-04-23 23:51:09" build="150813g">
+			<key name="Apps" modified="2019-04-24 21:30:49" build="150813g">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2019-04-23 23:51:09" build="150813g">
+			<key name="Colors" modified="2019-04-24 21:30:49" build="150813g">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 		</key>

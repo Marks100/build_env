@@ -39,7 +39,7 @@ set COMMON_TOOLS=^
 %TTLD%\Teraterm;^
 %TTLD%\CoIDE;^
 %TTLD%\Uncrustify;^
-"%TTLD%\ST\STM32 ST-LINK Utility\ST-LINK Utility";^
+%TTLD%\ST\STM32 ST-LINK Utility\ST-LINK Utility;^
 %PROGFILES_PATH%\USB Redirector Client;^
 %PROGFILES_PATH%\TortoiseSVN\bin;^
 %PBCD%\bin;^
@@ -60,15 +60,15 @@ if defined ConEmuBuild (
     prompt $E[1;32;40m$P$S{git}$S$_$E[1;30;40m{lamb}$S$E[0m
 
     :: Run clink
-	"%TTLD%\clink\clink_x%architecture%.exe" inject --quiet --profile "%BENV_CORE%\config"
+	::"%TTLD%\clink\clink_x%architecture%.exe" inject --quiet --profile "%BENV_CORE%\config"
 )
 
 :: Add aliases
 doskey /macrofile="%BENV_CORE%\config\aliases"
-
+xcopy /syi "%PBCD%\config\.bashrc" "%USERPROFILE%"
 
 :: Set home path
-set HOME=%USERPROFILE%
+::set HOME=%USERPROFILE%
 
 :: Create final PATH
 set PATH=.\;%COMMON_TOOLS%;%GIT_PATH%;\bin;%SYSTEMROOT%\system32;%SYSTEMROOT%;%SYSTEMROOT%\System32\Wbem
@@ -77,6 +77,6 @@ set PATH=.\;%COMMON_TOOLS%;%GIT_PATH%;\bin;%SYSTEMROOT%\system32;%SYSTEMROOT%;%S
 cd %PTLD%
 
 :: Set up the BENV_USERNAME - Read in from file if it exists in case we are offline and for optimising
-set BENVUSER_FILE="%USERPROFILE%\.benv_user"
+::set BENVUSER_FILE="%USERPROFILE%\.benv_user"
 
 :END_FILE
