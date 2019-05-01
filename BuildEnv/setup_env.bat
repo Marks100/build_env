@@ -44,6 +44,7 @@ set COMMON_TOOLS=^
 %PROGFILES_PATH%\USB Redirector Client;^
 %PROGFILES_PATH%\TortoiseSVN\bin;^
 %PBCD%\bin;^
+%PBCD%\..\Scripts;^
 %TTLD%\gcc-arm\bin;
 
 :: Git path
