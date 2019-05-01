@@ -1,0 +1,3 @@
+#!/bin/sh
+cd $PTLD
+common_modules_gen.rb ./TPMS_SWC/src/_common/cm_map.txt

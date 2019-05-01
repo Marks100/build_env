@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ps -efW | grep -i test_ | grep -v grep | awk '{print $2}' | xargs kill -f	
+
+ps -a | grep -v grep | grep ruby > /dev/null
+result=$?
+if [ "${result}" -eq "0" ] ; then
+	ps -ef | grep -i ruby  | grep -v grep | awk '{print $2}' | xargs kill	
+fi
+
+echo Build Aborted

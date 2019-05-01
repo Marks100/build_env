@@ -1,0 +1,3 @@
+#!/bin/bash
+
+start $PTLD/Workspace/STM32_sleepy_sensors.coproj

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+cd ../test/int_test/non_persistant
+rake clobber &
+cd ../persistant
+rake clobber &
+cd ../scp
+rake clobber &
+cd ../sits
+rake clobber &
+cd ../non_persistant_2
+rake clobber &
+cd ../persistant_2
+rake clobber &
+cd ../scp_2
+rake clobber &
+cd ../sits_2
+rake clobber &
+cd ../tech_safety
+rake clobber &
+cd ..
+rake clobber &
+
+while :
+do
+	ps -a | grep -v grep | grep ruby > /dev/null
+	result=$?
+	if [ "${result}" -eq "0" ] ; then
+		sleep 1
+	else
+		break
+	fi
+done
+
+echo Clean Finished
+

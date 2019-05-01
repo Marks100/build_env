@@ -1,0 +1,27 @@
+#!/bin/sh
+
+project=$1
+
+cd $PTLD/test/
+
+
+#remove all the old ceedling stuff
+rm -fR ./test
+rm -fR ./src
+rm -fR ./build
+rm -fR ./vendor
+
+cd ..
+#create new ceedling env
+ceedling new test 
+
+#now remove the unwanted ceedling stuff and create the usefull stuff
+cd test
+rm -fR ./src
+rm -fR ./test
+
+mkdir -p support
+mkdir -p int_test
+mkdir -p unit_test
+cd ..
+

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+GCOV_INT_OUT_DIR="$PTLD/TPMS_SWC/test/int_test/build/gcov/out"
+GCOV_UNIT_OUT_DIR="$PTLD/TPMS_SWC/test/unit_test/build/gcov/out"
+
+if [ -d "$GCOV_UNIT_OUT_DIR" ]; then
+
+  cd $PTLD/TPMS_SWC/test/unit_test/build/gcov/out
+  rm -f test_*.*
+  rm -f mock_*.*
+  rm -f CRC.*
+  rm -f SEL*.*
+  rm -f STDC*.*
+  rm -f callbacks.*
+  rm -f cmock.*
+  rm -f unity.*
+  rm -f *helper.*
+
+  cd $PTLD/TPMS_SWC/test/unit_test
+  lcov --rc lcov_branch_coverage=1 -c -d . -o build/artifacts/gcov/unit_results.info
+  genhtml -o build/artifacts/gcov/unit_results build/artifacts/gcov/unit_results.info  --rc genhtml_branch_coverage=1
+
+fi
+
+if [ -d "$GCOV_INT_OUT_DIR" ]; then
+
+  cd $PTLD/TPMS_SWC/test/int_test/build/gcov/out
+  rm -f test_*.*
+  rm -f mock_*.*
+  rm -f CRC.*
+  rm -f SEL*.*
+  rm -f STDC*.*
+  rm -f callbacks.*
+  rm -f cmock.*
+  rm -f unity.*
+  rm -f *helper.*
+
+  cd $PTLD/TPMS_SWC/test/int_test
+  lcov --rc lcov_branch_coverage=1 -c -d . -o build/artifacts/gcov/int_results.info
+  genhtml -o build/artifacts/gcov/int_results build/artifacts/gcov/int_results.info  --rc genhtml_branch_coverage=1
+
+fi
+
+if [ -d "$GCOV_INT_OUT_DIR" ]; then
+  if [ -d "$GCOV_UNIT_OUT_DIR" ]; then
+	cd $PTLD/TPMS_SWC/test/int_test
+    lcov -rc lcov_branch_coverage=1 -a build/artifacts/gcov/int_results.info -a ../unit_test/build/artifacts/gcov/unit_results.info -o build/artifacts/gcov/overall_results.info
+    genhtml -o build/artifacts/gcov/overall_results build/artifacts/gcov/overall_results.info --rc genhtml_branch_coverage=1
+  fi
+fi
+
