@@ -40,6 +40,7 @@ set COMMON_TOOLS=^
 %TTLD%\CoIDE;^
 %TTLD%\Uncrustify;^
 %TTLD%\ST\STM32 ST-LINK Utility\ST-LINK Utility;^
+%TTLD%\Graphviz\bin;^
 %PROGFILES_PATH%\USB Redirector Client;^
 %PROGFILES_PATH%\TortoiseSVN\bin;^
 %PBCD%\bin;^
